@@ -200,12 +200,23 @@ export default function Home() {
     }
   }, [settings.packageDisplayOrder])
 
-  // Update document title when settings change
+  // Update document title and favicon when settings change
   useEffect(() => {
     if (settings.pageTitle) {
       document.title = settings.pageTitle
     }
-  }, [settings.pageTitle])
+    
+    // Update favicon
+    if (settings.logo) {
+      const link = document.querySelector("link[rel*='icon']") as HTMLLinkElement || document.createElement('link')
+      link.type = 'image/svg+xml'
+      link.rel = 'icon'
+      link.href = settings.logo
+      if (!document.querySelector("link[rel*='icon']")) {
+        document.head.appendChild(link)
+      }
+    }
+  }, [settings.pageTitle, settings.logo])
 
   const fetchHeroSlides = async () => {
     try {
