@@ -359,13 +359,15 @@ export default function Home() {
     }
   }
 
-  // Use hero slides from database, fallback to default if empty
+  // Use hero slides from database, fallback to first slide from data if empty
   const slides = heroSlides.length > 0 ? heroSlides : [
     {
-      image: '/kaaba-hero.jpg',
-      title: 'Paket Umroh Premium',
-      subtitle: 'Nikmati pengalaman spiritual yang tak terlupakan',
-      description: 'Fasilitas bintang 5 dengan pelayanan terbaik'
+      image: '/uploads/1762785746161-c6smxjn.png',
+      title: 'Naik Haji ke Langit',
+      subtitle: 'Naik haji ke Langit ke 7',
+      description: 'Makin mudah naik haji ke Langit',
+      ctaText: 'Mau Ikut',
+      ctaLink: '/paket'
     }
   ]
 
