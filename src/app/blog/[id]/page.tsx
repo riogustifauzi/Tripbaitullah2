@@ -59,27 +59,35 @@ export default function BlogDetail() {
   const shareUrl = typeof window !== 'undefined' ? window.location.href : ''
   
   const handleShare = (platform: string) => {
+    if (!article) return
+    
     const text = `${article.title} - Tripbaitullah`
     const url = shareUrl
 
-    switch (platform) {
-      case 'whatsapp':
-        window.open(`https://wa.me/?text=${encodeURIComponent(text + ' ' + url)}`, '_blank')
-        break
-      case 'facebook':
-        window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`, '_blank')
-        break
-      case 'twitter':
-        window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank')
-        break
-      case 'telegram':
-        window.open(`https://t.me/share/url?url=${encodeURIComponent(url)}&text=${encodeURIComponent(text)}`, '_blank')
-        break
-      case 'copy':
-        navigator.clipboard.writeText(url)
-        setCopied(true)
-        setTimeout(() => setCopied(false), 2000)
-        break
+    try {
+      switch (platform) {
+        case 'whatsapp':
+          window.open(`https://wa.me/?text=${encodeURIComponent(text + ' ' + url)}`, '_blank')
+          break
+        case 'facebook':
+          window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`, '_blank')
+          break
+        case 'twitter':
+          window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank')
+          break
+        case 'telegram':
+          window.open(`https://t.me/share/url?url=${encodeURIComponent(url)}&text=${encodeURIComponent(text)}`, '_blank')
+          break
+        case 'copy':
+          if (navigator.clipboard) {
+            navigator.clipboard.writeText(url)
+            setCopied(true)
+            setTimeout(() => setCopied(false), 2000)
+          }
+          break
+      }
+    } catch (error) {
+      console.error('Error sharing:', error)
     }
   }
 
@@ -118,16 +126,20 @@ export default function BlogDetail() {
       try {
         setLoading(true)
         const response = await fetch(`/api/blogs/${params.id}`)
-        if (response.ok) {
-          const data = await response.json()
-          setArticle(data)
-        } else {
-          console.error('Article not found')
-          router.push('/blog')
+        
+        if (!response.ok) {
+          console.error('Failed to fetch article:', response.status, response.statusText)
+          // Don't redirect immediately, show error state
+          setArticle(null)
+          setLoading(false)
+          return
         }
+        
+        const data = await response.json()
+        setArticle(data)
       } catch (error) {
         console.error('Error fetching article:', error)
-        router.push('/blog')
+        setArticle(null)
       } finally {
         setLoading(false)
       }
@@ -136,7 +148,7 @@ export default function BlogDetail() {
     if (params.id) {
       fetchArticle()
     }
-  }, [params.id, router])
+  }, [params.id])
 
   // Handle scroll to top button visibility
   useEffect(() => {
@@ -171,12 +183,31 @@ export default function BlogDetail() {
   }
 
   // Show loading state
-  if (loading || !article) {
+  if (loading) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-green-50 to-teal-50 flex items-center justify-center">
         <div className="text-center">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-emerald-600 mx-auto mb-4"></div>
           <p className="text-gray-600">Memuat artikel...</p>
+        </div>
+      </div>
+    )
+  }
+
+  // Show error state if article not found
+  if (!article) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-green-50 to-teal-50 flex items-center justify-center">
+        <div className="text-center max-w-md mx-auto p-8">
+          <div className="text-6xl mb-4">😔</div>
+          <h1 className="text-2xl font-bold text-gray-900 mb-2">Artikel Tidak Ditemukan</h1>
+          <p className="text-gray-600 mb-6">Maaf, artikel yang Anda cari tidak tersedia atau telah dihapus.</p>
+          <Button 
+            onClick={() => router.push('/blog')}
+            className="bg-gradient-to-r from-emerald-600 to-green-600 hover:from-emerald-700 hover:to-green-700"
+          >
+            Kembali ke Blog
+          </Button>
         </div>
       </div>
     )
