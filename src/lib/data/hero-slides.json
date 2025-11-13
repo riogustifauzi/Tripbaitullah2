@@ -1,0 +1,28 @@
+[
+  {
+    "id": "1762785792866-gir25lftw",
+    "image": "/uploads/1762785746161-c6smxjn.png",
+    "title": "Naik Haji ke Langit",
+    "subtitle": "Naik haji ke Langit ke 7",
+    "description": "Makin mudah  naik haji ke Langit",
+    "ctaText": "Mau Ikut",
+    "ctaLink": "http://localhost:3000/paket",
+    "order": 1,
+    "isActive": true,
+    "createdAt": "2025-11-10T14:43:12.866Z",
+    "updatedAt": "2025-11-10T15:37:27.390Z"
+  },
+  {
+    "id": "1762785717636-xoospe2ww",
+    "image": "/uploads/1762785389048-52rhiga.jpeg",
+    "title": "Umroh Ramadhan",
+    "subtitle": "Bulan Suci di Mekah",
+    "description": "Nikmati Ibadah yang indah di bulan Ramadhan",
+    "ctaText": "Pilih Paket",
+    "ctaLink": "http://localhost:3000/paket",
+    "order": 2,
+    "isActive": true,
+    "createdAt": "2025-11-10T14:41:57.637Z",
+    "updatedAt": "2025-11-10T15:37:27.390Z"
+  }
+]

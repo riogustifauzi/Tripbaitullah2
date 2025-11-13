@@ -1,0 +1,276 @@
+[
+  {
+    "id": "1762740942839-b77zb2j02",
+    "title": "Umroh Reguler Percobaan",
+    "slug": "umroh-reguler-percobaan",
+    "travelId": "1762738073451-18kzep8fp",
+    "description": "Umroh ini hanya percobaan saja yaa",
+    "duration": 9,
+    "departureDate": "2025-11-10T02:14:10.550Z",
+    "returnDate": "2025-11-27T00:00:00.000Z",
+    "quota": 100,
+    "bookedSeats": 0,
+    "pricingTiers": [
+      {
+        "name": "Standard",
+        "price": 22500000,
+        "originalPrice": 30000000,
+        "cashback": 1000000,
+        "hotelMakkah": "Hotel Bintang 3",
+        "hotelMadinah": "Hotel Bintang 3",
+        "roomType": "Sekamar 4 Orang",
+        "additionalFacilities": [],
+        "isPopular": false
+      },
+      {
+        "name": "Premium",
+        "price": 30000000,
+        "originalPrice": 40000000,
+        "cashback": 2000000,
+        "hotelMakkah": "Pullman HS",
+        "hotelMadinah": "Md Has Hotel",
+        "roomType": "Sekamar 2 Orang",
+        "additionalFacilities": [],
+        "isPopular": true
+      }
+    ],
+    "facilities": [
+      "Tiket Pesawat PP",
+      "Asuransi"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Hari 1",
+        "activities": [
+          "Keberangkatan dari Indonesia",
+          "Terus terbnag"
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Hari 2",
+        "activities": [
+          "Semangat aja pokoknya"
+        ]
+      }
+    ],
+    "images": [
+      "/uploads/1762740908053-euzntoz.jpg",
+      "/uploads/1762740911628-tqg1dq1.png",
+      "/uploads/1762740941060-kx4j806.png"
+    ],
+    "status": "active",
+    "createdAt": "2025-11-10T02:15:42.839Z",
+    "updatedAt": "2025-11-12T09:59:45.124Z",
+    "departureCity": "Pekanbaru",
+    "airline": "Garuda",
+    "flightType": "Transit",
+    "excludedFacilities": [
+      "makan"
+    ],
+    "isPinned": false
+  },
+  {
+    "id": "1762750186806-4jz9vg8dr",
+    "title": "umro aijshd kjashdk  aisj d",
+    "slug": "umro-aijshd-kjashdk-aisj-d",
+    "travelId": "1762738073451-18kzep8fp",
+    "description": "aksjd kjashd ajshd kjashd kjahs d",
+    "duration": 9,
+    "departureDate": "2025-11-29T00:00:00.000Z",
+    "returnDate": "2026-01-10T00:00:00.000Z",
+    "departureCity": "Pekanbaru",
+    "quota": 100,
+    "bookedSeats": 0,
+    "airline": "Garuda",
+    "flightType": "Langsung",
+    "pricingTiers": [
+      {
+        "name": "Standard",
+        "price": 22500000,
+        "originalPrice": 30000000,
+        "cashback": 500000,
+        "hotelMakkah": "Hotel Bintang 3",
+        "hotelMadinah": "Hotel Bintang 3",
+        "roomType": "Quad",
+        "additionalFacilities": [],
+        "isPopular": false
+      },
+      {
+        "name": "Premium",
+        "price": 25000000,
+        "originalPrice": 30000000,
+        "cashback": 10000000,
+        "hotelMakkah": "asj djas dlj ⭐⭐⭐",
+        "hotelMadinah": "aksjd jas dj ⭐⭐⭐⭐⭐",
+        "roomType": "Double",
+        "additionalFacilities": [],
+        "isPopular": true
+      }
+    ],
+    "facilities": [
+      "Hotel Bintang 5",
+      "Makan 3x Sehari"
+    ],
+    "excludedFacilities": [],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Hari 1",
+        "activities": [
+          "Keberangkatan dari Indonesia"
+        ]
+      }
+    ],
+    "images": [
+      "/uploads/1762750174545-aidbcln.jpeg",
+      "/uploads/1762750178480-74ab0wx.jpg",
+      "/uploads/1762750181449-l41sde9.png"
+    ],
+    "status": "active",
+    "createdAt": "2025-11-10T04:49:46.806Z",
+    "updatedAt": "2025-11-12T09:59:48.630Z",
+    "isPinned": false
+  },
+  {
+    "id": "1762761452905-y314nc2w8",
+    "title": "Umroh Penuh Cinta Bersama Jabal Tour",
+    "slug": "umroh-penuh-cinta-bersama-jabal-tour",
+    "travelId": "1762716006659-ujiz7u1zi",
+    "description": "Umroh Penuh Cinta Bersama Jabal Tour\nWujudkan Perjalanan Suci yang Penuh dengan Cinta 💖",
+    "duration": 12,
+    "departureDate": "2025-11-13T00:00:00.000Z",
+    "returnDate": "2025-11-19T00:00:00.000Z",
+    "departureCity": "Pekanbaru",
+    "quota": 100,
+    "bookedSeats": 0,
+    "airline": "Saudi Airlines",
+    "flightType": "Langsung",
+    "pricingTiers": [
+      {
+        "name": "Paket Lancang Kuning",
+        "price": 29000000,
+        "originalPrice": 30000000,
+        "cashback": 500000,
+        "hotelMakkah": "Zam-Zam Hotel",
+        "hotelMadinah": "Sundawa Kali Hotel",
+        "roomType": "Quad",
+        "additionalFacilities": [],
+        "isPopular": false
+      },
+      {
+        "name": "Paket Sulthan",
+        "price": 32000000,
+        "originalPrice": 34999997,
+        "cashback": 1000000,
+        "hotelMakkah": "Pullman Hotel",
+        "hotelMadinah": "Zaidan Hotel",
+        "roomType": "Double",
+        "additionalFacilities": [],
+        "isPopular": false
+      }
+    ],
+    "facilities": [
+      "Visa",
+      "Tour Guide",
+      "Mutowif Handal"
+    ],
+    "excludedFacilities": [
+      "Jalan-jalan ",
+      "Oleh-oleh",
+      "Biaya Pasport"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Hari 1",
+        "activities": [
+          "Keberangkatan dari Indonesia",
+          "Berangkat dari Malaisya"
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Hari 2",
+        "activities": [
+          "Sampai di Madinah",
+          "Ziarah"
+        ]
+      }
+    ],
+    "images": [
+      "/uploads/1762761357972-vsfllqe.jpg",
+      "/uploads/1762761366178-y6xnvyf.jpg",
+      "/uploads/1762761374423-kw63z04.jpg"
+    ],
+    "status": "active",
+    "createdAt": "2025-11-10T07:57:32.905Z",
+    "updatedAt": "2025-11-11T08:25:20.954Z",
+    "isPinned": false
+  },
+  {
+    "id": "1762789273890-8gbw98li2",
+    "title": "Umroh Bulan November Promo",
+    "slug": "umroh-bulan-november-promo",
+    "travelId": "1762715555898-wqmn4arjs",
+    "description": "Umroh ini Promo untuk khusus Bulan November",
+    "duration": 12,
+    "departureDate": "2025-11-15T00:00:00.000Z",
+    "returnDate": "2025-11-19T00:00:00.000Z",
+    "departureCity": "Pekanbaru",
+    "quota": 100,
+    "bookedSeats": 0,
+    "airline": "Saudi Airlines",
+    "flightType": "Langsung",
+    "pricingTiers": [
+      {
+        "name": "Standard",
+        "price": 20000000,
+        "originalPrice": 22000000,
+        "cashback": 500000,
+        "hotelMakkah": "Hotel Bintang 3",
+        "hotelMadinah": "Hotel Bintang 3",
+        "roomType": "Quad",
+        "additionalFacilities": [],
+        "isPopular": true
+      }
+    ],
+    "facilities": [
+      "Pesawat",
+      "Koper",
+      "Handling Bandara",
+      "Kemeja",
+      "Kain Ihram"
+    ],
+    "excludedFacilities": [
+      "Makan di sana",
+      "Biaya Transport di sana"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Kenerangkatan",
+        "activities": [
+          "Berkumpul di Asrama Pekanbaru"
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Perjalanan",
+        "activities": [
+          "Semua Jamaah di Perjalanan"
+        ]
+      }
+    ],
+    "images": [
+      "/uploads/1762789231506-84l4nou.jpg",
+      "/uploads/1762789236746-tr8ewsv.jpg",
+      "/uploads/1762789243777-9kln1rz.jpg"
+    ],
+    "status": "active",
+    "createdAt": "2025-11-10T15:41:13.890Z",
+    "updatedAt": "2025-11-12T09:59:51.411Z",
+    "isPinned": false
+  }
+]

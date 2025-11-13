@@ -1,0 +1,52 @@
+[
+  {
+    "id": "1",
+    "username": "admin",
+    "email": "admin@tripbaitullah.com",
+    "password": "admin123",
+    "role": "admin",
+    "isActive": true,
+    "createdAt": "2024-01-01T00:00:00.000Z",
+    "updatedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "2",
+    "username": "editor",
+    "email": "editor@tripbaitullah.com",
+    "password": "editor123",
+    "role": "editor",
+    "isActive": true,
+    "createdAt": "2024-01-15T00:00:00.000Z",
+    "updatedAt": "2024-01-15T00:00:00.000Z"
+  },
+  {
+    "id": "3",
+    "username": "ahmad",
+    "email": "ahmad@tripbaitullah.com",
+    "password": "ahmad123",
+    "role": "editor",
+    "isActive": true,
+    "createdAt": "2024-02-01T00:00:00.000Z",
+    "updatedAt": "2024-02-01T00:00:00.000Z"
+  },
+  {
+    "id": "4",
+    "username": "siti",
+    "email": "siti@tripbaitullah.com",
+    "password": "siti123",
+    "role": "editor",
+    "isActive": false,
+    "createdAt": "2024-02-10T00:00:00.000Z",
+    "updatedAt": "2024-02-10T00:00:00.000Z"
+  },
+  {
+    "id": "5",
+    "username": "superadmin",
+    "email": "superadmin@tripbaitullah.com",
+    "password": "super123",
+    "role": "admin",
+    "isActive": true,
+    "createdAt": "2024-01-01T00:00:00.000Z",
+    "updatedAt": "2024-01-01T00:00:00.000Z"
+  }
+]

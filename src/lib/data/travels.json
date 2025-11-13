@@ -1,0 +1,104 @@
+[
+  {
+    "id": "1762715555898-wqmn4arjs",
+    "name": "PT Safina Tour",
+    "slug": "pt-safina-tour",
+    "logo": "/uploads/1762715547175-3nf191e.jpeg",
+    "city": "kota Pekanbaru - Riau",
+    "address": "Dusun Suka Damai, RT 024/RW 009, Bsgan Jaya, Enok",
+    "phone": "082261252301",
+    "email": "rio.gusti123@gmail.com",
+    "website": "https://www.homelykursus.com",
+    "description": "jas dkjas dkj askjd aksjd kajsd ",
+    "certifications": [],
+    "rating": 5,
+    "totalPackages": 1,
+    "status": "active",
+    "createdAt": "2025-11-09T19:12:35.898Z",
+    "updatedAt": "2025-11-11T07:40:46.992Z",
+    "verified": true,
+    "tagline": "melayani saja",
+    "experience": "10",
+    "facilities": [],
+    "detailedCertifications": [],
+    "achievements": [],
+    "gallery": []
+  },
+  {
+    "id": "1762716006659-ujiz7u1zi",
+    "name": "Jabal Tour Travel",
+    "slug": "jabal-tour-travel",
+    "logo": "/uploads/1762715989216-lbkqysb.png",
+    "city": "Pekanbaru",
+    "address": "Dusun Suka Damai, RT 024/RW 009, Bsgan Jaya, Enok",
+    "phone": "082261252301",
+    "email": "rio.gusti123@gmail.com",
+    "website": "https://www.homelykursus.com",
+    "description": "💖 Mantap <br>\n🙏 Jos <br>\n😍 Top Dah bNagett sjdh ks",
+    "certifications": [],
+    "rating": 5,
+    "totalPackages": 1,
+    "status": "active",
+    "createdAt": "2025-11-09T19:20:06.659Z",
+    "updatedAt": "2025-11-10T09:21:58.390Z",
+    "verified": true,
+    "tagline": "",
+    "experience": "",
+    "facilities": [],
+    "detailedCertifications": [],
+    "achievements": [],
+    "gallery": []
+  },
+  {
+    "id": "1762738073451-18kzep8fp",
+    "name": "Silversilk Tour",
+    "slug": "silversilk-tour",
+    "logo": "/uploads/1762737996040-0krtrv0.jpeg",
+    "city": "Pekanbaru",
+    "address": "Jl Imam Muanndar",
+    "phone": "082261252301",
+    "email": "rio.gusti123@gmail.com",
+    "website": "https://www.homelykursus.com",
+    "description": "sangat nyaman dan asri sekali",
+    "certifications": [],
+    "rating": 5,
+    "totalPackages": 2,
+    "status": "active",
+    "createdAt": "2025-11-10T01:27:53.452Z",
+    "updatedAt": "2025-11-10T09:15:36.372Z",
+    "tagline": "Siap menuju Baitullah",
+    "experience": "10 Tahun Penglaman",
+    "facilities": [
+      "Bus pariwisata AC",
+      "Makan Bergizi Gratis"
+    ],
+    "detailedCertifications": [
+      {
+        "name": "PPIU",
+        "number": "123"
+      }
+    ],
+    "achievements": [
+      {
+        "year": "2021",
+        "title": "BEST",
+        "organization": "IAI"
+      }
+    ],
+    "gallery": [
+      {
+        "id": "gallery-1762739316182-0",
+        "url": "/uploads/1762739316159-kccyflr.png",
+        "title": "Anak Lari-lari",
+        "description": "Anak lari lari deskripsinya"
+      },
+      {
+        "id": "gallery-1762739899247-0",
+        "url": "/uploads/1762739899235-i58fowe.jpg",
+        "title": "Anak Ayam",
+        "description": "Anak Ayam Lompat lompat"
+      }
+    ],
+    "verified": true
+  }
+]
