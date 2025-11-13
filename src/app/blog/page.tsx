@@ -78,7 +78,14 @@ export default function AllArticles() {
           <div className="flex items-center justify-between">
             <a href="/" className="flex items-center space-x-2 cursor-pointer hover:opacity-80 transition-opacity">
               <div className="w-10 h-10 flex items-center justify-center">
-                <Image src="/uploads/1762771904921-h15y0ji.png" alt="Tripbaitullah Logo" width={40} height={40} className="object-contain" />
+                <Image 
+                  src="/uploads/1762771904921-h15y0ji.png" 
+                  alt="Tripbaitullah Logo" 
+                  width={40} 
+                  height={40} 
+                  className="object-contain"
+                  suppressHydrationWarning
+                />
               </div>
               <span className="text-xl font-bold bg-gradient-to-r from-emerald-600 to-green-600 bg-clip-text text-transparent">
                 Tripbaitullah
@@ -264,6 +271,7 @@ export default function AllArticles() {
                     width={40} 
                     height={40} 
                     className="object-contain"
+                    suppressHydrationWarning
                   />
                 </div>
                 <span className="text-xl font-bold">Tripbaitullah</span>
