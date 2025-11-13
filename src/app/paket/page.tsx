@@ -409,7 +409,7 @@ export default function AllPackages() {
       <header className="fixed top-0 w-full z-50 backdrop-blur-md bg-white/20 border-b border-white/20">
         <nav className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-2">
+            <a href="/" className="flex items-center space-x-2 cursor-pointer hover:opacity-80 transition-opacity">
               <div className="w-10 h-10 flex items-center justify-center" suppressHydrationWarning>
                 <Image 
                   src={settings.logo} 
@@ -424,7 +424,7 @@ export default function AllPackages() {
               <span className="text-xl font-bold bg-gradient-to-r from-emerald-600 to-green-600 bg-clip-text text-transparent">
                 {settings.siteName}
               </span>
-            </div>
+            </a>
 
             {/* Desktop Menu */}
             <div className="hidden md:flex items-center space-x-8">
@@ -797,7 +797,7 @@ export default function AllPackages() {
         <div className="container mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
-              <div className="flex items-center space-x-2 mb-4">
+              <a href="/" className="flex items-center space-x-2 mb-4 cursor-pointer hover:opacity-80 transition-opacity">
                 <div className="w-10 h-10 flex items-center justify-center" suppressHydrationWarning>
                   <Image 
                     src={settings.footerLogo} 
@@ -809,7 +809,7 @@ export default function AllPackages() {
                   />
                 </div>
                 <span className="text-xl font-bold">{settings.siteName}</span>
-              </div>
+              </a>
               <p className="text-gray-400">
                 {settings.footerAbout}
               </p>
