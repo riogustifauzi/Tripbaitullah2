@@ -1,10 +1,24 @@
 import fs from 'fs/promises'
 import path from 'path'
+import { kv } from '@vercel/kv'
 
 const DATA_DIR = path.join(process.cwd(), 'src/lib/data')
+const IS_PRODUCTION = process.env.VERCEL === '1'
+
+// Helper to get KV key name
+function getKVKey(filename: string): string {
+  return `data:${filename}`
+}
 
 export async function readData<T>(filename: string): Promise<T[]> {
   try {
+    // In production, use Vercel KV
+    if (IS_PRODUCTION) {
+      const data = await kv.get<T[]>(getKVKey(filename))
+      return data || []
+    }
+    
+    // In development, use file system
     const filePath = path.join(DATA_DIR, filename)
     const fileContent = await fs.readFile(filePath, 'utf-8')
     return JSON.parse(fileContent)
@@ -15,8 +29,20 @@ export async function readData<T>(filename: string): Promise<T[]> {
 }
 
 export async function writeData<T>(filename: string, data: T[]): Promise<void> {
-  const filePath = path.join(DATA_DIR, filename)
-  await fs.writeFile(filePath, JSON.stringify(data, null, 2), 'utf-8')
+  try {
+    // In production, use Vercel KV
+    if (IS_PRODUCTION) {
+      await kv.set(getKVKey(filename), data)
+      return
+    }
+    
+    // In development, use file system
+    const filePath = path.join(DATA_DIR, filename)
+    await fs.writeFile(filePath, JSON.stringify(data, null, 2), 'utf-8')
+  } catch (error) {
+    console.error('Error writing data:', error)
+    throw error
+  }
 }
 
 export async function findById<T extends { id: string }>(
