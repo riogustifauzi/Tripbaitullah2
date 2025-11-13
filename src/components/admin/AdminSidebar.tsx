@@ -85,9 +85,9 @@ export default function AdminSidebar({ isOpen, onToggle }: AdminSidebarProps) {
         <div className="flex items-center justify-between h-16 px-4 border-b border-gray-200">
           {isOpen && (
             <Link href="/paneladmin" className="flex items-center space-x-2">
-              <div className="w-8 h-8 rounded-full overflow-hidden">
+              <div className="w-8 h-8 flex items-center justify-center">
                 <Image 
-                  src="/logo.svg" 
+                  src="/uploads/1762771904921-h15y0ji.png" 
                   alt="Tripbaitullah" 
                   width={32} 
                   height={32}
@@ -100,12 +100,12 @@ export default function AdminSidebar({ isOpen, onToggle }: AdminSidebarProps) {
             </Link>
           )}
           {!isOpen && (
-            <div className="w-8 h-8 rounded-full overflow-hidden mx-auto">
+            <div className="w-8 h-8 flex items-center justify-center mx-auto">
               <Image 
-                src="/logo.svg" 
+                src="/uploads/1762771904921-h15y0ji.png" 
                 alt="Tripbaitullah" 
                 width={32} 
-                height={32}
+                  height={32}
                 className="object-contain"
               />
             </div>

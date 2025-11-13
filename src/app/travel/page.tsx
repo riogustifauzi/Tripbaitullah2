@@ -64,7 +64,7 @@ export default function AllTravelProviders() {
         <nav className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
-              <div className="w-10 h-10 rounded-full flex items-center justify-center overflow-hidden">
+              <div className="w-10 h-10 flex items-center justify-center">
                 <Image src="/uploads/1762771904921-h15y0ji.png" alt="Tripbaitullah Logo" width={40} height={40} className="object-contain" />
               </div>
               <span className="text-xl font-bold bg-gradient-to-r from-emerald-600 to-green-600 bg-clip-text text-transparent">
@@ -226,8 +226,14 @@ export default function AllTravelProviders() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
               <div className="flex items-center space-x-2 mb-4">
-                <div className="w-10 h-10 bg-gradient-to-r from-emerald-600 to-green-600 rounded-full flex items-center justify-center">
-                  <Heart className="w-6 h-6 text-white" />
+                <div className="w-10 h-10 flex items-center justify-center">
+                  <Image 
+                    src="/uploads/1762771919359-zayvu3d.png" 
+                    alt="Tripbaitullah Logo" 
+                    width={40} 
+                    height={40} 
+                    className="object-contain"
+                  />
                 </div>
                 <span className="text-xl font-bold">Tripbaitullah</span>
               </div>
