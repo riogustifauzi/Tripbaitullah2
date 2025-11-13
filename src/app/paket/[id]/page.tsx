@@ -518,7 +518,8 @@ Daftar sekarang! 👇`
 
                     {/* WhatsApp Button */}
                     <Button 
-                      className="w-full bg-gradient-to-r from-emerald-600 to-green-600 hover:from-emerald-700 hover:to-green-700"
+                      size="lg"
+                      className="w-full bg-gradient-to-r from-emerald-600 to-green-600 hover:from-emerald-700 hover:to-green-700 text-lg font-bold py-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
                       onClick={() => {
                         if (packageData.travel) {
                           const phone = packageData.travel.phone.replace(/[^0-9]/g, '')
@@ -528,8 +529,8 @@ Daftar sekarang! 👇`
                         }
                       }}
                     >
-                      <MessageCircle className="w-4 h-4 mr-2" />
-                      Pilih Paket
+                      <CheckCircle className="w-6 h-6 mr-2 animate-pulse" />
+                      Pilih Paket Sekarang
                     </Button>
 
                     {/* Payment Security Info */}

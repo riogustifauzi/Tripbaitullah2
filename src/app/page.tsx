@@ -876,8 +876,7 @@ export default function Home() {
             {blogArticles.length > 0 ? blogArticles.map((article) => (
               <Card 
                 key={article.id} 
-                className="bg-white/90 backdrop-blur-sm border-white/20 hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer"
-                onClick={() => router.push(`/blog/${article.id}`)}
+                className="bg-white/90 backdrop-blur-sm border-white/20 hover:shadow-lg transition-all duration-300 hover:scale-105"
               >
                 <CardHeader className="p-0">
                   <img
@@ -903,16 +902,14 @@ export default function Home() {
                     <span>{article.author}</span>
                     <span>{formatDate(article.publishedAt)}</span>
                   </div>
-                  <Button 
-                    variant="outline" 
-                    className="w-full border-emerald-600 text-emerald-600 hover:bg-emerald-600 hover:text-white text-sm py-2"
-                    onClick={(e) => {
-                      e.stopPropagation()
-                      router.push(`/blog/${article.id}`)
-                    }}
-                  >
-                    Baca Selengkapnya
-                  </Button>
+                  <a href={`/blog/${article.id}`}>
+                    <Button 
+                      variant="outline" 
+                      className="w-full border-emerald-600 text-emerald-600 hover:bg-emerald-600 hover:text-white text-sm py-2"
+                    >
+                      Baca Selengkapnya
+                    </Button>
+                  </a>
                 </CardContent>
               </Card>
             )) : (
