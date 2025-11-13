@@ -205,14 +205,14 @@ Daftar sekarang! 👇`
       <header className="fixed top-0 w-full z-50 backdrop-blur-md bg-white/80 border-b border-white/20">
         <nav className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-2">
+            <a href="/" className="flex items-center space-x-2 cursor-pointer hover:opacity-80 transition-opacity">
               <div className="w-10 h-10 flex items-center justify-center">
                 <Image src="/uploads/1762771904921-h15y0ji.png" alt="Tripbaitullah Logo" width={40} height={40} className="object-contain" />
               </div>
               <span className="text-xl font-bold bg-gradient-to-r from-emerald-600 to-green-600 bg-clip-text text-transparent">
                 Tripbaitullah
               </span>
-            </div>
+            </a>
 
             {/* Desktop Menu */}
             <div className="hidden md:flex items-center space-x-8">

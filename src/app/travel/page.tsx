@@ -63,14 +63,14 @@ export default function AllTravelProviders() {
       <header className="fixed top-0 w-full z-50 backdrop-blur-md bg-white/20 border-b border-white/20">
         <nav className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-2">
+            <a href="/" className="flex items-center space-x-2 cursor-pointer hover:opacity-80 transition-opacity">
               <div className="w-10 h-10 flex items-center justify-center">
                 <Image src="/uploads/1762771904921-h15y0ji.png" alt="Tripbaitullah Logo" width={40} height={40} className="object-contain" />
               </div>
               <span className="text-xl font-bold bg-gradient-to-r from-emerald-600 to-green-600 bg-clip-text text-transparent">
                 Tripbaitullah
               </span>
-            </div>
+            </a>
 
             {/* Desktop Menu */}
             <div className="hidden md:flex items-center space-x-8">
@@ -225,7 +225,7 @@ export default function AllTravelProviders() {
         <div className="container mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
-              <div className="flex items-center space-x-2 mb-4">
+              <a href="/" className="flex items-center space-x-2 mb-4 cursor-pointer hover:opacity-80 transition-opacity">
                 <div className="w-10 h-10 flex items-center justify-center">
                   <Image 
                     src="/uploads/1762771919359-zayvu3d.png" 
@@ -236,7 +236,7 @@ export default function AllTravelProviders() {
                   />
                 </div>
                 <span className="text-xl font-bold">Tripbaitullah</span>
-              </div>
+              </a>
               <p className="text-gray-400">
                 Platform terpercaya untuk menemukan paket umroh terbaik dari travel umroh berpengalaman.
               </p>

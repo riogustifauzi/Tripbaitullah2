@@ -18,6 +18,14 @@ export const metadata: Metadata = {
   description: "Platform terpercaya untuk menemukan paket umroh terbaik dari travel umroh berpengalaman di Indonesia. Temukan paket umroh sesuai budget dan kebutuhan Anda.",
   keywords: ["umroh", "paket umroh", "travel umroh", "haji", "ibadah", "makkah", "madinah", "tripbaitullah"],
   authors: [{ name: "Tripbaitullah" }],
+  icons: {
+    icon: [
+      { url: '/uploads/1762771904921-h15y0ji.png' },
+      { url: '/icon.png', sizes: '32x32', type: 'image/png' },
+    ],
+    shortcut: '/uploads/1762771904921-h15y0ji.png',
+    apple: '/apple-icon.png',
+  },
   openGraph: {
     title: "Tripbaitullah - Platform Umroh Terpercaya",
     description: "Platform terpercaya untuk menemukan paket umroh terbaik dari travel umroh berpengalaman",
