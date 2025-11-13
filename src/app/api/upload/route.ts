@@ -1,13 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { writeFile, mkdir } from 'fs/promises'
-import path from 'path'
-import { existsSync } from 'fs'
+import { put } from '@vercel/blob'
 
-const UPLOAD_DIR = path.join(process.cwd(), 'public/uploads')
 const MAX_FILE_SIZE = 10 * 1024 * 1024 // 10MB
-const ALLOWED_TYPES = ['image/jpeg', 'image/jpg', 'image/png', 'image/webp']
+const ALLOWED_TYPES = ['image/jpeg', 'image/jpg', 'image/png', 'image/webp', 'image/gif']
 
-// POST /api/upload - Upload file (image)
+// POST /api/upload - Upload file (image) to Vercel Blob Storage
 export async function POST(request: NextRequest) {
   try {
     const formData = await request.formData()
@@ -31,7 +28,7 @@ export async function POST(request: NextRequest) {
         {
           error: {
             code: 'VALIDATION_ERROR',
-            message: 'Invalid file type. Only JPG, PNG, and WebP are allowed.'
+            message: 'Invalid file type. Only JPG, PNG, WebP, and GIF are allowed.'
           }
         },
         { status: 400 }
@@ -51,28 +48,21 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Create upload directory if it doesn't exist
-    if (!existsSync(UPLOAD_DIR)) {
-      await mkdir(UPLOAD_DIR, { recursive: true })
-    }
-
     // Generate unique filename
     const timestamp = Date.now()
     const randomString = Math.random().toString(36).substring(2, 9)
-    const extension = path.extname(file.name)
-    const filename = `${timestamp}-${randomString}${extension}`
-    const filepath = path.join(UPLOAD_DIR, filename)
+    const extension = file.name.split('.').pop()
+    const filename = `${timestamp}-${randomString}.${extension}`
 
-    // Convert file to buffer and save
-    const bytes = await file.arrayBuffer()
-    const buffer = Buffer.from(bytes)
-    await writeFile(filepath, buffer)
+    // Upload to Vercel Blob Storage
+    const blob = await put(filename, file, {
+      access: 'public',
+      addRandomSuffix: false,
+    })
 
     // Return file URL
-    const fileUrl = `/uploads/${filename}`
-
     return NextResponse.json({
-      url: fileUrl,
+      url: blob.url,
       filename: filename,
       size: file.size,
       mimeType: file.type
@@ -83,7 +73,7 @@ export async function POST(request: NextRequest) {
       {
         error: {
           code: 'INTERNAL_ERROR',
-          message: 'Failed to upload file'
+          message: error instanceof Error ? error.message : 'Failed to upload file'
         }
       },
       { status: 500 }
