@@ -192,47 +192,45 @@ export default function AllArticles() {
           ) : filteredArticles.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {filteredArticles.map((article) => (
-                <Card 
-                  key={article.id} 
-                  className="bg-white/90 backdrop-blur-sm border-white/20 hover:shadow-lg transition-shadow cursor-pointer"
-                  onClick={() => router.push(`/blog/${article.id}`)}
-                >
-                  <CardHeader className="p-0">
-                    <img
-                      src={article.featuredImage}
-                      alt={article.title}
-                      className="w-full h-48 object-cover rounded-t-lg"
-                    />
-                  </CardHeader>
-                  <CardContent className="p-4">
-                    <div className="flex items-center justify-between mb-3">
-                      <Badge className="bg-emerald-600 text-white text-xs">
-                        {article.category}
-                      </Badge>
-                      <div className="flex items-center text-xs text-gray-500">
-                        <Clock className="w-3 h-3 mr-1" />
-                        <span>{calculateReadTime(article.content)}</span>
+                <a key={article.id} href={`/blog/${article.id}`} className="block">
+                  <Card className="bg-white/90 backdrop-blur-sm border-white/20 hover:shadow-lg transition-shadow cursor-pointer">
+                    <CardHeader className="p-0">
+                      <img
+                        src={article.featuredImage}
+                        alt={article.title}
+                        className="w-full h-48 object-cover rounded-t-lg"
+                      />
+                    </CardHeader>
+                    <CardContent className="p-4">
+                      <div className="flex items-center justify-between mb-3">
+                        <Badge className="bg-emerald-600 text-white text-xs">
+                          {article.category}
+                        </Badge>
+                        <div className="flex items-center text-xs text-gray-500">
+                          <Clock className="w-3 h-3 mr-1" />
+                          <span>{calculateReadTime(article.content)}</span>
+                        </div>
                       </div>
-                    </div>
-                    <CardTitle className="text-base mb-2 line-clamp-2">
-                      {article.title}
-                    </CardTitle>
-                    <CardDescription className="text-sm text-gray-600 mb-3 line-clamp-2">
-                      {article.excerpt}
-                    </CardDescription>
-                    <Separator className="my-3" />
-                    <div className="flex items-center justify-between text-xs text-gray-500">
-                      <div className="flex items-center space-x-1">
-                        <User className="w-3 h-3" />
-                        <span>{article.author}</span>
+                      <CardTitle className="text-base mb-2 line-clamp-2">
+                        {article.title}
+                      </CardTitle>
+                      <CardDescription className="text-sm text-gray-600 mb-3 line-clamp-2">
+                        {article.excerpt}
+                      </CardDescription>
+                      <Separator className="my-3" />
+                      <div className="flex items-center justify-between text-xs text-gray-500">
+                        <div className="flex items-center space-x-1">
+                          <User className="w-3 h-3" />
+                          <span>{article.author}</span>
+                        </div>
+                        <div className="flex items-center space-x-1">
+                          <Calendar className="w-3 h-3" />
+                          <span>{formatDate(article.publishedAt)}</span>
+                        </div>
                       </div>
-                      <div className="flex items-center space-x-1">
-                        <Calendar className="w-3 h-3" />
-                        <span>{formatDate(article.publishedAt)}</span>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
+                    </CardContent>
+                  </Card>
+                </a>
               ))}
             </div>
           ) : (
