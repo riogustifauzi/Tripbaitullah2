@@ -14,7 +14,16 @@ export async function readData<T>(filename: string): Promise<T[]> {
   try {
     // In production, use Vercel KV
     if (IS_PRODUCTION) {
+      console.log(`[KV] Reading from key: ${getKVKey(filename)}`)
+      
+      // Check if KV is configured
+      if (!process.env.KV_REST_API_URL || !process.env.KV_REST_API_TOKEN) {
+        console.error('[KV] Environment variables not configured!')
+        throw new Error('Vercel KV not configured. Please setup KV database in Vercel Dashboard.')
+      }
+      
       const data = await kv.get<T[]>(getKVKey(filename))
+      console.log(`[KV] Read ${data?.length || 0} items`)
       return data || []
     }
     
@@ -23,6 +32,7 @@ export async function readData<T>(filename: string): Promise<T[]> {
     const fileContent = await fs.readFile(filePath, 'utf-8')
     return JSON.parse(fileContent)
   } catch (error) {
+    console.error(`[Data Access] Error reading ${filename}:`, error)
     // If file doesn't exist or is empty, return empty array
     return []
   }
@@ -32,7 +42,16 @@ export async function writeData<T>(filename: string, data: T[]): Promise<void> {
   try {
     // In production, use Vercel KV
     if (IS_PRODUCTION) {
+      console.log(`[KV] Writing to key: ${getKVKey(filename)}, items: ${data.length}`)
+      
+      // Check if KV is configured
+      if (!process.env.KV_REST_API_URL || !process.env.KV_REST_API_TOKEN) {
+        console.error('[KV] Environment variables not configured!')
+        throw new Error('Vercel KV not configured. Please setup KV database in Vercel Dashboard.')
+      }
+      
       await kv.set(getKVKey(filename), data)
+      console.log(`[KV] Write successful`)
       return
     }
     
@@ -40,7 +59,7 @@ export async function writeData<T>(filename: string, data: T[]): Promise<void> {
     const filePath = path.join(DATA_DIR, filename)
     await fs.writeFile(filePath, JSON.stringify(data, null, 2), 'utf-8')
   } catch (error) {
-    console.error('Error writing data:', error)
+    console.error(`[Data Access] Error writing ${filename}:`, error)
     throw error
   }
 }
