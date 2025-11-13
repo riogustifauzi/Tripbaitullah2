@@ -18,11 +18,6 @@ export const metadata: Metadata = {
   description: "Platform terpercaya untuk menemukan paket umroh terbaik dari travel umroh berpengalaman di Indonesia. Temukan paket umroh sesuai budget dan kebutuhan Anda.",
   keywords: ["umroh", "paket umroh", "travel umroh", "haji", "ibadah", "makkah", "madinah", "tripbaitullah"],
   authors: [{ name: "Tripbaitullah" }],
-  icons: {
-    icon: "/logo.svg",
-    shortcut: "/logo.svg",
-    apple: "/logo.svg",
-  },
   openGraph: {
     title: "Tripbaitullah - Platform Umroh Terpercaya",
     description: "Platform terpercaya untuk menemukan paket umroh terbaik dari travel umroh berpengalaman",
@@ -53,11 +48,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="id" suppressHydrationWarning>
-      <head>
-        <link rel="icon" href="/logo.svg" type="image/svg+xml" />
-        <link rel="shortcut icon" href="/logo.svg" />
-        <link rel="apple-touch-icon" href="/logo.svg" />
-      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground`}
       >

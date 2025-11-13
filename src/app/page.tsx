@@ -171,14 +171,14 @@ export default function Home() {
   const [settings, setSettings] = useState<any>({
     siteName: 'Tripbaitullah',
     pageTitle: 'Tripbaitullah - Platform Umroh Terpercaya',
-    logo: '/logo.svg',
-    footerLogo: '/logo.svg',
+    logo: '/uploads/1762771904921-h15y0ji.png',
+    footerLogo: '/uploads/1762771919359-zayvu3d.png',
     footerAbout: 'Platform terpercaya untuk menemukan paket umroh terbaik dari travel umroh berpengalaman.',
     footerPhone: '+62 812-3456-7890',
     footerEmail: 'info@tripbaitullah.com',
     footerAddress: 'Jakarta, Indonesia',
-    footerCopyright: '© 2024 Tripbaitullah. All rights reserved.',
-    packageDisplayOrder: 'newest'
+    footerCopyright: '© 2025 Tripbaitullah. All rights reserved.',
+    packageDisplayOrder: 'random'
   })
 
   // Fetch hero slides, packages, travels, and settings from API
