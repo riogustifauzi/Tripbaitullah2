@@ -110,7 +110,7 @@ tripbaitullah/
 
 ## 🚀 Deployment
 
-### Deploy ke GitHub
+### Deploy Pertama Kali ke GitHub
 
 **Cara Cepat (Windows):**
 ```bash
@@ -127,17 +127,34 @@ git branch -M main
 git push -u origin main
 ```
 
-📚 **Panduan Lengkap:**
+📚 **Panduan Deploy Pertama:**
 - **Quick Start**: Baca `QUICK_DEPLOY.md`
 - **Panduan Detail**: Baca `PANDUAN_DEPLOY_GITHUB.md`
 - **Checklist**: Baca `CHECKLIST_DEPLOY.md`
 - **Daftar Panduan**: Baca `README_DEPLOY.md`
 
-### Deploy ke Vercel (Recommended untuk Production)
+### Update Code (Setelah Ada Perubahan)
+
+**Cara Tercepat:**
 ```bash
-npm run build
-vercel deploy
+update-code.bat
 ```
+
+**Atau Manual:**
+```bash
+git add .
+git commit -m "Deskripsi perubahan"
+git push
+```
+
+📚 **Panduan Update Code:**
+- **Panduan Lengkap**: Baca `PANDUAN_UPDATE_CODE.md`
+- **Quick Reference**: Baca `QUICK_UPDATE.md`
+
+### Deploy ke Vercel (Recommended untuk Production)
+
+Vercel akan otomatis deploy setiap kali Anda push ke GitHub.
+Cek status di: https://vercel.com/dashboard
 
 ### Deploy ke Platform Lain
 ```bash

@@ -859,64 +859,54 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Scroll Indicator for Mobile */}
-          <div className="md:hidden text-center text-gray-500 text-sm mb-4">
-            <span className="inline-flex items-center">
-              Geser ke kanan untuk melihat artikel lainnya
-              <ChevronRight className="w-4 h-4 ml-1" />
-            </span>
-          </div>
-
-          <div className="overflow-x-auto pb-4 scrollbar-hide">
-            <div className="flex space-x-4 md:grid md:grid-cols-4 md:gap-4 md:space-x-0 min-w-max scroll-smooth">
-              {blogArticles.length > 0 ? blogArticles.map((article) => (
-                <Card 
-                  key={article.id} 
-                  className="bg-white/90 backdrop-blur-sm border-white/20 hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer w-72 md:w-full flex-shrink-0"
-                  onClick={() => router.push(`/blog/${article.id}`)}
-                >
-                  <CardHeader className="p-0">
-                    <img
-                      src={article.featuredImage}
-                      alt={article.title}
-                      className="w-full h-32 object-cover rounded-t-lg"
-                    />
-                  </CardHeader>
-                  <CardContent className="p-3">
-                    <div className="flex items-center justify-between mb-2">
-                      <Badge className="bg-emerald-600 text-white text-xs px-2 py-1">
-                        {article.category}
-                      </Badge>
-                      <span className="text-xs text-gray-500">{calculateReadTime(article.content)}</span>
-                    </div>
-                    <CardTitle className="text-sm mb-2 line-clamp-2">
-                      {article.title}
-                    </CardTitle>
-                    <CardDescription className="text-xs text-gray-600 mb-3 line-clamp-2">
-                      {article.excerpt}
-                    </CardDescription>
-                    <div className="flex items-center justify-between text-xs text-gray-500 mb-3">
-                      <span>{article.author}</span>
-                      <span>{formatDate(article.publishedAt)}</span>
-                    </div>
-                    <Button 
-                      variant="outline" 
-                      className="w-full border-emerald-600 text-emerald-600 hover:bg-emerald-600 hover:text-white text-xs py-2"
-                      onClick={(e) => {
-                        e.stopPropagation()
-                        router.push(`/blog/${article.id}`)
-                      }}
-                    >
-                      Baca Selengkapnya
-                    </Button>
-                  </CardContent>
-                </Card>
-              )) : (
-                <div className="text-center py-8 text-gray-500 w-full">
-                  Belum ada artikel tersedia
-                </div>
-              )}
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {blogArticles.length > 0 ? blogArticles.map((article) => (
+              <Card 
+                key={article.id} 
+                className="bg-white/90 backdrop-blur-sm border-white/20 hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer"
+                onClick={() => router.push(`/blog/${article.id}`)}
+              >
+                <CardHeader className="p-0">
+                  <img
+                    src={article.featuredImage}
+                    alt={article.title}
+                    className="w-full h-48 object-cover rounded-t-lg"
+                  />
+                </CardHeader>
+                <CardContent className="p-4">
+                  <div className="flex items-center justify-between mb-2">
+                    <Badge className="bg-emerald-600 text-white text-xs px-2 py-1">
+                      {article.category}
+                    </Badge>
+                    <span className="text-xs text-gray-500">{calculateReadTime(article.content)}</span>
+                  </div>
+                  <CardTitle className="text-base mb-2 line-clamp-2">
+                    {article.title}
+                  </CardTitle>
+                  <CardDescription className="text-sm text-gray-600 mb-3 line-clamp-2">
+                    {article.excerpt}
+                  </CardDescription>
+                  <div className="flex items-center justify-between text-xs text-gray-500 mb-3">
+                    <span>{article.author}</span>
+                    <span>{formatDate(article.publishedAt)}</span>
+                  </div>
+                  <Button 
+                    variant="outline" 
+                    className="w-full border-emerald-600 text-emerald-600 hover:bg-emerald-600 hover:text-white text-sm py-2"
+                    onClick={(e) => {
+                      e.stopPropagation()
+                      router.push(`/blog/${article.id}`)
+                    }}
+                  >
+                    Baca Selengkapnya
+                  </Button>
+                </CardContent>
+              </Card>
+            )) : (
+              <div className="col-span-4 text-center py-12 text-gray-500">
+                Belum ada artikel tersedia
+              </div>
+            )}
           </div>
           
           {/* Lihat Semua Button */}
